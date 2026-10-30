@@ -60,28 +60,28 @@ public class AlmacenamientoTest {
     void testCaso7_LimiteInferiorAtencion() {
         ResponseEntity<String> response = almacenamientoService.consultarAlmacenamiento(80, 100);
         assertEquals(200, response.getStatusCode().value());
-        assertEquals("Atencion", response.getBody());
+        assertEquals("Atención", response.getBody());
     }
 
     @Test
     void testCaso8_JustoPorEncimaAtencion() {
         ResponseEntity<String> response = almacenamientoService.consultarAlmacenamiento(80.1, 100);
         assertEquals(200, response.getStatusCode().value());
-        assertEquals("Atencion", response.getBody());
+        assertEquals("Atención", response.getBody());
     }
 
     @Test
     void testCaso9_ValorIntermedioAtencion() {
         ResponseEntity<String> response = almacenamientoService.consultarAlmacenamiento(90, 100);
         assertEquals(200, response.getStatusCode().value());
-        assertEquals("Atencion", response.getBody());
+        assertEquals("Atención", response.getBody());
     }
 
     @Test
     void testCaso10_LimiteSuperiorAtencion() {
         ResponseEntity<String> response = almacenamientoService.consultarAlmacenamiento(99.9, 100);
         assertEquals(200, response.getStatusCode().value());
-        assertEquals("Atencion", response.getBody());
+        assertEquals("Atención", response.getBody());
     }
 
     @Test
@@ -125,21 +125,21 @@ public class AlmacenamientoTest {
     void testCaso16_LimiteInferiorAtencion_Capacidad50() {
         ResponseEntity<String> response = almacenamientoService.consultarAlmacenamiento(40, 50);
         assertEquals(200, response.getStatusCode().value());
-        assertEquals("Atencion", response.getBody());
+        assertEquals("Atención", response.getBody());
     }
 
     @Test
     void testCaso17_ValorIntermedioAtencion_Capacidad50() {
         ResponseEntity<String> response = almacenamientoService.consultarAlmacenamiento(45, 50);
         assertEquals(200, response.getStatusCode().value());
-        assertEquals("Atencion", response.getBody());
+        assertEquals("Atención", response.getBody());
     }
 
     @Test
     void testCaso18_LimiteSuperiorAtencion_Capacidad50() {
         ResponseEntity<String> response = almacenamientoService.consultarAlmacenamiento(49.9, 50);
         assertEquals(200, response.getStatusCode().value());
-        assertEquals("Atencion", response.getBody());
+        assertEquals("Atención", response.getBody());
     }
 
     @Test
